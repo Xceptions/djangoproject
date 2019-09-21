@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+    <head>
+        {% load static %}
+        <title>Django App</title>
+        <meta charset='utf-8'/>
+        <meta name='viewport' content="width=device-width, initial-scale=1.0"/>
+        <link rel='stylesheet' href="{% static 'css/bootstrap/css/bootstrap.min.css' %}"/>
+        <link rel='stylesheet' href="{% static 'css/index.css' %}"/>
+    </head>
+    <body>
+        <div class='container-fluid'>
+            <h1>User {{ username }} Created</h1>
+        </div>
+
+        <script src='{% static "js/jquery.js" %}'></script>
+        <script src='{% static "css/bootstrap/js/bootstrap.min.js" %}'></script>
+        <script src='{% static "js/index.js" %}'></script>
+    </body>
+</html>

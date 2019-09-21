@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+    <head>
+        {% load static %}
+        <title>Django App</title>
+        <meta charset='utf-8'/>
+        <meta name='viewport' content="width=device-width, initial-scale=1.0"/>
+        <link rel='stylesheet' href="{% static 'css/bootstrap/css/bootstrap.min.css' %}"/>
+        <link rel='stylesheet' href="{% static 'css/index.css' %}"/>
+    </head>
+    <body>
+        <div class='container-fluid'>
+            <h1>All set</h1>
+            <form class='form' action='/createuser/' method='post'>
+                {% csrf_token %}
+                <label>Name</label>
+                <input type='text' name='username'/>
+                <br>
+                <label>password</label>
+                <input type='password' name='userpass'/>
+                <br><br>
+                <button type='submit' class='btn btn-primary'>Create New User</button>
+            </form>
+        </div>
+
+        <script src='{% static "js/jquery.js" %}'></script>
+        <script src='{% static "css/bootstrap/js/bootstrap.min.js" %}'></script>
+        <script src='{% static "js/index.js" %}'></script>
+    </body>
+</html>
